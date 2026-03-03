@@ -38,7 +38,7 @@ export default function Gallery() {
         <div className="text-center mb-16">
           <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Dokumentasi</span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-4">
-            Galeri Kegiatan
+            Galeri Kegiatan Bimbel
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg">
             Lihat suasana belajar dan berbagai kegiatan di Bimbel Sukses Pamong Praja.

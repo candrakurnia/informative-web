@@ -13,17 +13,56 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="inline-flex items-center bg-yellow-400/20 text-yellow-300 text-sm font-semibold px-4 py-2 rounded-full mb-6 border border-yellow-400/30">
-              🎓 #1 Bimbel Persiapan IPDN & Sekolah Kedinasan
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-              Bimbel Sukses <br />
-              <span className="text-yellow-400">Pamong Praja</span>
+            {/* Heading */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
+              Bimbel SPP – <br />
+              <span className="text-yellow-400">Sukses Pamong Praja</span>
             </h1>
-            <p className="text-lg text-blue-200 leading-relaxed mb-8 max-w-lg">
-              Wujudkan impian menjadi abdi negara melalui IPDN dan Sekolah Kedinasan.
-              Bersama SPP, ribuan alumni telah berhasil meraih cita-cita mereka. Kini giliran kamu!
+
+            {/* Subtitle */}
+            <p className="text-lg md:text-xl text-blue-100 font-medium mb-2">
+              Ingin lolos sekolah kedinasan tahun ini?
             </p>
+            <p className="text-blue-200 leading-relaxed mb-6 max-w-lg">
+              Persiapkan dirimu bersama Bimbel SPP, bimbel khusus kedinasan dengan sistem belajar terarah, intensif,
+              dan fokus pada kelulusan.
+            </p>
+
+            {/* Target Institutions */}
+            <div className="mb-6">
+              <p className="text-sm text-blue-300 mb-2">Kami membantu persiapan masuk:</p>
+              <div className="flex flex-wrap gap-2">
+                {['IPDN', 'STIN', 'Poltekim', 'Poltekip', 'Sekolah Kedinasan Lainnya'].map((name) => (
+                  <span key={name} className="bg-white/10 text-white text-sm font-medium px-3 py-1 rounded-full border border-white/20">
+                    {name}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Checklist */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-8">
+              {[
+                'Materi sesuai standar CAT terbaru',
+                'Tryout rutin & pembahasan lengkap',
+                'Strategi lolos SKD & tes lanjutan',
+                'Pembinaan mental & wawancara',
+                'Pendampingan sampai tahap akhir',
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-2 text-sm text-blue-100">
+                  <span className="text-green-400 flex-shrink-0">✅</span>
+                  {item}
+                </div>
+              ))}
+            </div>
+
+            {/* Tagline */}
+            <p className="text-lg text-white font-semibold mb-8">
+              Kami tidak hanya mengajar. <br />
+              <span className="text-yellow-400">Kami membimbing sampai kamu lulus.</span>
+            </p>
+
+            {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
               <button
                 onClick={() => scrollTo('program')}
@@ -40,22 +79,9 @@ export default function Hero() {
                 Konsultasi Gratis
               </a>
             </div>
-
-            {/* Quick Stats */}
-            <div className="flex gap-8 mt-12">
-              {[
-                { number: '2.500+', label: 'Alumni Lolos' },
-                { number: '95%', label: 'Tingkat Kelulusan' },
-                { number: '12+', label: 'Tahun Pengalaman' },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <div className="text-2xl md:text-3xl font-bold text-yellow-400">{stat.number}</div>
-                  <div className="text-sm text-blue-300">{stat.label}</div>
-                </div>
-              ))}
-            </div>
           </div>
 
+          {/* Hero Image */}
           <div className="hidden md:block">
             <div className="relative">
               <div className="absolute -inset-4 bg-yellow-400/20 rounded-3xl blur-2xl"></div>

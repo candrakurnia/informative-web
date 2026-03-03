@@ -1,3 +1,10 @@
+const trainings = [
+  { icon: '✔', text: 'Simulasi CAT real test' },
+  { icon: '✔', text: 'Evaluasi nilai berkala' },
+  { icon: '✔', text: 'Strategi manajemen waktu saat ujian' },
+  { icon: '✔', text: 'Motivasi & pembentukan mental pejuang' },
+]
+
 const reasons = [
   {
     icon: '🏆',
@@ -45,17 +52,38 @@ export default function WhyUs() {
   return (
     <section id="mengapa-kami" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        {/* Main Message */}
+        <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Keunggulan Kami</span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-4">
-            Mengapa Harus Bimbel SPP?
+            Kenapa Harus Bimbel SPP?
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-            Bimbel Sukses Pamong Praja bukan sekadar tempat belajar, tapi mitra terbaik untuk mewujudkan
-            impian menjadi abdi negara.
+          <p className="text-gray-500 text-lg mb-2">
+            Karena seleksi kedinasan itu ketat.
+          </p>
+          <p className="text-gray-500 text-lg mb-8">
+            Kamu butuh strategi, bukan hanya belajar sendiri.
+          </p>
+
+          <p className="text-gray-700 font-semibold text-lg mb-5">
+            Di Bimbel SPP, kamu dilatih dengan:
+          </p>
+
+          <div className="inline-flex flex-col gap-3 text-left">
+            {trainings.map((item) => (
+              <div key={item.text} className="flex items-center gap-3">
+                <span className="text-green-500 font-bold text-lg">✔</span>
+                <span className="text-gray-700 text-lg">{item.text}</span>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-xl md:text-2xl font-extrabold text-blue-600 mt-8">
+            Target kami satu: <span className="text-yellow-500">LOLOS SKD.</span>
           </p>
         </div>
 
+        {/* Detail Cards
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {reasons.map((reason) => (
             <div
@@ -71,7 +99,7 @@ export default function WhyUs() {
               </p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   )
