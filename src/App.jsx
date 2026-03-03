@@ -1,32 +1,32 @@
-import { Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout'
-import Home from './pages/Home'
-import About from './pages/About'
-import Technology from './pages/Technology'
-import Health from './pages/Health'
-import Education from './pages/Education'
-import Environment from './pages/Environment'
-import Science from './pages/Science'
-import Culture from './pages/Culture'
-import Travel from './pages/Travel'
-import Contact from './pages/Contact'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Hero from './sections/Hero'
+import WhyUs from './sections/WhyUs'
+import ParentMessage from './sections/ParentMessage'
+import Gallery from './sections/Gallery'
+import Programs from './sections/Programs'
+import FeaturedPrograms from './sections/FeaturedPrograms'
+import Testimonials from './sections/Testimonials'
+import Team from './sections/Team'
+import Contact from './sections/Contact'
 
 function App() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/tentang" element={<About />} />
-        <Route path="/teknologi" element={<Technology />} />
-        <Route path="/kesehatan" element={<Health />} />
-        <Route path="/pendidikan" element={<Education />} />
-        <Route path="/lingkungan" element={<Environment />} />
-        <Route path="/sains" element={<Science />} />
-        <Route path="/budaya" element={<Culture />} />
-        <Route path="/wisata" element={<Travel />} />
-        <Route path="/kontak" element={<Contact />} />
-      </Route>
-    </Routes>
+    <div className="min-h-screen bg-white text-gray-800">
+      <Navbar />
+      <main>
+        <Hero />
+        <WhyUs />
+        <ParentMessage />
+        <Gallery />
+        <Programs />
+        <FeaturedPrograms />
+        <Testimonials />
+        <Team />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   )
 }
 
