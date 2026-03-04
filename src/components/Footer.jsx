@@ -20,7 +20,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Lembaga bimbingan belajar terpercaya untuk persiapan seleksi IPDN dan Sekolah Kedinasan sejak 2014.
+              Lembaga bimbingan belajar terpercaya untuk persiapan seleksi IPDN dan Sekolah Kedinasan.
             </p>
           </div>
 
@@ -83,7 +83,7 @@ export default function Footer() {
                 📸 @bimbelspp
               </a>
               <p className="flex items-start gap-2">
-                📍 Jl. Sukawening No. 16, Jatinangor, Sumedang
+                📍 Jl. Sukawening No. 16, Kel. Hegarmanah, Kec. Jatinangor, Sumedang, Jawa Barat 45363
               </p>
             </div>
           </div>
