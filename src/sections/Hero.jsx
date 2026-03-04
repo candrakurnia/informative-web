@@ -11,12 +11,11 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-blue-950/80 via-transparent to-blue-900/50"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             {/* Heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
-              Bimbel SPP – <br />
-              <span className="text-yellow-400">Sukses Pamong Praja</span>
+              Bimbel SPP –
+              <span className="text-yellow-400"> Sukses Pamong Praja</span>
             </h1>
 
             {/* Subtitle */}
@@ -80,8 +79,6 @@ export default function Hero() {
               </a>
             </div>
           </div>
-
-        </div>
       </div>
     </section>
   )

@@ -2,7 +2,6 @@ export default function ParentMessage() {
   return (
     <section className="py-20 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
 
           <div>
             <div className="inline-flex items-center bg-amber-100 text-amber-700 text-sm font-semibold px-4 py-2 rounded-full mb-6">
@@ -31,7 +30,6 @@ export default function ParentMessage() {
               </p>
             </div>
           </div>
-        </div>
       </div>
     </section>
   )
