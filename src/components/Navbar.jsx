@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const navLinks = [
   { id: 'beranda', label: 'Beranda' },
@@ -10,9 +10,66 @@ const navLinks = [
   { id: 'kontak', label: 'Kontak' },
 ]
 
+function WhatsAppDropdown() {
+  const [open, setOpen] = useState(false)
+  const ref = useRef(null)
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (ref.current && !ref.current.contains(e.target)) setOpen(false)
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
+  return (
+    <div className="relative" ref={ref}>
+      <button
+        onClick={() => setOpen(!open)}
+        className="ml-2 bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-colors flex items-center gap-1"
+      >
+        💬 WhatsApp
+        <svg className={`w-4 h-4 transition-transform ${open ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      {open && (
+        <div className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-50">
+          <a
+            href="https://wa.me/6288707032434"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 px-4 py-3 hover:bg-green-50 transition-colors"
+          >
+            <span className="w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm">💬</span>
+            <div>
+              <div className="text-sm font-semibold text-gray-800">Adam</div>
+              <div className="text-xs text-gray-400">+62 887-0703-2434</div>
+            </div>
+          </a>
+          <a
+            href="https://wa.me/6288286397018"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 px-4 py-3 hover:bg-green-50 transition-colors border-t border-gray-50"
+          >
+            <span className="w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm">💬</span>
+            <div>
+              <div className="text-sm font-semibold text-gray-800">Cindy</div>
+              <div className="text-xs text-gray-400">+62 882-8639-7018</div>
+            </div>
+          </a>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [mobileWa, setMobileWa] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -22,6 +79,7 @@ export default function Navbar() {
 
   const scrollTo = (id) => {
     setIsOpen(false)
+    setMobileWa(false)
     const el = document.getElementById(id)
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
@@ -52,14 +110,7 @@ export default function Navbar() {
                 {link.label}
               </button>
             ))}
-            <a
-              href="https://wa.me/6281234567890"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-2 bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-colors"
-            >
-              💬 WhatsApp
-            </a>
+            <WhatsAppDropdown />
           </div>
 
           {/* Mobile Menu Button */}
@@ -90,14 +141,45 @@ export default function Navbar() {
                   {link.label}
                 </button>
               ))}
-              <a
-                href="https://wa.me/6281234567890"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-colors text-center"
+
+              {/* Mobile WA Dropdown */}
+              <button
+                onClick={() => setMobileWa(!mobileWa)}
+                className="mt-2 bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-colors text-center flex items-center justify-center gap-1"
               >
-                💬 Hubungi via WhatsApp
-              </a>
+                💬 WhatsApp
+                <svg className={`w-4 h-4 transition-transform ${mobileWa ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileWa && (
+                <div className="mt-1 bg-green-50 rounded-xl overflow-hidden">
+                  <a
+                    href="https://wa.me/6288707032434"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-4 py-3 hover:bg-green-100 transition-colors"
+                  >
+                    <span>💬</span>
+                    <div>
+                      <div className="text-sm font-semibold text-gray-800">Adam</div>
+                      <div className="text-xs text-gray-500">+62 887-0703-2434</div>
+                    </div>
+                  </a>
+                  <a
+                    href="https://wa.me/6288286397018"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-4 py-3 hover:bg-green-100 transition-colors border-t border-green-100"
+                  >
+                    <span>💬</span>
+                    <div>
+                      <div className="text-sm font-semibold text-gray-800">Cindy</div>
+                      <div className="text-xs text-gray-500">+62 882-8639-7018</div>
+                    </div>
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         )}

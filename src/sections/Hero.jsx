@@ -81,26 +81,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="hidden md:block">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-yellow-400/20 rounded-3xl blur-2xl"></div>
-              <img
-                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80"
-                alt="Siswa Bimbel SPP"
-                className="relative rounded-3xl shadow-2xl w-full h-[500px] object-cover"
-              />
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-2xl">✅</div>
-                  <div>
-                    <div className="text-sm font-bold text-gray-800">Terbukti Lolos!</div>
-                    <div className="text-xs text-gray-500">2.500+ Alumni IPDN & Kedinasan</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

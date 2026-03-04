@@ -49,11 +49,8 @@ export default function Team() {
         <div className="text-center mb-16">
           <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Tim Kami</span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-4">
-            Orang-Orang di Balik SPP
+            Founders dan Manager Bimbel SPP
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-            Dipimpin oleh alumni IPDN berpengalaman yang memahami seluk-beluk seleksi kedinasan.
-          </p>
         </div>
 
         {/* Founders */}
@@ -85,30 +82,6 @@ export default function Team() {
                     ))}
                   </div>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Managers */}
-        <div className="text-center mb-8">
-          <h3 className="text-2xl font-bold text-gray-900">Tim Manajemen</h3>
-        </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {managers.map((person) => (
-            <div
-              key={person.name}
-              className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-md transition-shadow text-center"
-            >
-              <img
-                src={person.photo}
-                alt={person.name}
-                className="w-full h-52 object-cover"
-              />
-              <div className="p-5">
-                <h4 className="font-bold text-gray-800">{person.name}</h4>
-                <p className="text-sm text-blue-600 font-medium mb-2">{person.role}</p>
-                <p className="text-xs text-gray-500">{person.desc}</p>
               </div>
             </div>
           ))}

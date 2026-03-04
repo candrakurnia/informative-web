@@ -64,20 +64,26 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Hubungi Kami</h3>
             <div className="space-y-3 text-sm text-gray-400">
-              <a href="tel:+6281234567890" className="flex items-center gap-2 hover:text-white transition-colors">
-                📞 +62 812-3456-7890
+              <a href="tel:+6288707032434" className="flex items-center gap-2 hover:text-white transition-colors">
+                📞 +62 887-0703-2434 (Adam)
               </a>
-              <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
-                💬 WhatsApp
+              <a href="tel:+6288286397018" className="flex items-center gap-2 hover:text-white transition-colors">
+                📞 +62 882-8639-7018 (Cindy)
               </a>
-              <a href="mailto:info@bimbelspp.com" className="flex items-center gap-2 hover:text-white transition-colors">
-                📧 info@bimbelspp.com
+              <a href="https://wa.me/6288707032434" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
+                💬 WA Adam
               </a>
-              <a href="https://instagram.com/bimbelspp_official" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
-                📸 @bimbelspp_official
+              <a href="https://wa.me/6288286397018" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
+                💬 WA Cindy
+              </a>
+              <a href="mailto:suksespamongp@gmail.com" className="flex items-center gap-2 hover:text-white transition-colors">
+                📧 suksespamongp@gmail.com
+              </a>
+              <a href="https://instagram.com/bimbelspp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
+                📸 @bimbelspp
               </a>
               <p className="flex items-start gap-2">
-                📍 Jl. Pamong Praja No. 45, Jatinangor, Sumedang
+                📍 Jl. Sukawening No. 16, Jatinangor, Sumedang
               </p>
             </div>
           </div>

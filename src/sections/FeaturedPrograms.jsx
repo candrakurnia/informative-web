@@ -1,39 +1,63 @@
 const programs = [
   {
-    icon: '🎖️',
-    title: 'Persiapan IPDN',
-    desc: 'Program khusus persiapan seleksi Institut Pemerintahan Dalam Negeri. Mencakup SKD (TWK, TIU, TKP), seleksi kesehatan, jasmani, dan wawancara.',
-    highlights: ['SKD (CAT BKN)', 'Tes Kesehatan', 'Tes Jasmani', 'Wawancara Panel'],
+    icon: '📖',
+    title: 'Akademik',
+    items: [
+      'Matematika / Penalaran Numerik',
+      'Pengetahuan Umum',
+      'Wawasan Kebangsaan',
+      'Bahasa Indonesia',
+      'Bahasa Inggris',
+    ],
     color: 'blue',
   },
   {
-    icon: '⚔️',
-    title: 'Persiapan Sekolah Kedinasan',
-    desc: 'Program persiapan untuk berbagai Sekolah Kedinasan: STIS, STAN, STMKG, STIN, STIP, Poltekip/Poltekim, dan lainnya.',
-    highlights: ['STIS / BPS', 'PKN STAN', 'STIN / BIN', 'Poltekip / Poltekim'],
-    color: 'indigo',
-  },
-  {
-    icon: '📝',
-    title: 'Drilling Soal SKD',
-    desc: 'Program drilling soal SKD intensif dengan ribuan bank soal terbaru. Fokus pada peningkatan skor TWK, TIU, dan TKP agar melewati passing grade.',
-    highlights: ['5.000+ Bank Soal', 'Passing Grade Strategy', 'Pembahasan Detail', 'Simulasi CAT'],
-    color: 'emerald',
+    icon: '🧠',
+    title: 'Psikologi',
+    items: [
+      'Kecerdasan',
+      'Kepribadian',
+      'Kecermatan',
+    ],
+    color: 'purple',
   },
   {
     icon: '🏋️',
-    title: 'Pembinaan Jasmani',
-    desc: 'Program pembinaan fisik khusus untuk persiapan tes jasmani seleksi IPDN dan Sekolah Kedinasan. Dilatih oleh instruktur profesional.',
-    highlights: ['Lari 12 Menit', 'Pull Up & Push Up', 'Shuttle Run', 'Renang'],
+    title: 'Jasmani',
+    items: [
+      'Samapta A',
+      'Samapta B',
+    ],
     color: 'red',
+  },
+  {
+    icon: '🏥',
+    title: 'Kesehatan',
+    items: [
+      'Medical Check Up',
+      'Postur',
+      'Terapi Tinggi',
+      'Perbaikan Kesehatan',
+    ],
+    color: 'emerald',
+  },
+  {
+    icon: '🛡️',
+    title: 'Mental Ideologi / PMK',
+    items: [
+      'Tertulis',
+      'Wawancara',
+    ],
+    color: 'amber',
   },
 ]
 
 const colorMap = {
-  blue: { bg: 'bg-blue-50', text: 'text-blue-600', badge: 'bg-blue-100 text-blue-700' },
-  indigo: { bg: 'bg-indigo-50', text: 'text-indigo-600', badge: 'bg-indigo-100 text-indigo-700' },
-  emerald: { bg: 'bg-emerald-50', text: 'text-emerald-600', badge: 'bg-emerald-100 text-emerald-700' },
-  red: { bg: 'bg-red-50', text: 'text-red-600', badge: 'bg-red-100 text-red-700' },
+  blue: 'bg-blue-500',
+  purple: 'bg-purple-500',
+  red: 'bg-red-500',
+  emerald: 'bg-emerald-500',
+  amber: 'bg-amber-500',
 }
 
 export default function FeaturedPrograms() {
@@ -46,34 +70,32 @@ export default function FeaturedPrograms() {
             Program Unggulan
           </h2>
           <p className="text-blue-300 max-w-2xl mx-auto text-lg">
-            Program-program spesial yang dirancang khusus untuk memaksimalkan peluang kelulusan kamu.
+            Materi lengkap yang dirancang khusus untuk memaksimalkan peluang kelulusan di setiap tahapan seleksi.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {programs.map((program) => {
-            const colors = colorMap[program.color]
-            return (
-              <div
-                key={program.title}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/15 transition-all hover:shadow-2xl"
-              >
-                <div className="text-4xl mb-4">{program.icon}</div>
-                <h3 className="text-xl font-bold mb-3">{program.title}</h3>
-                <p className="text-blue-200 leading-relaxed mb-6">{program.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {program.highlights.map((h) => (
-                    <span
-                      key={h}
-                      className={`text-xs font-medium px-3 py-1 rounded-full ${colors.badge}`}
-                    >
-                      {h}
-                    </span>
-                  ))}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {programs.map((program) => (
+            <div
+              key={program.title}
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-7 border border-white/10 hover:bg-white/15 transition-all hover:shadow-2xl"
+            >
+              <div className="flex items-center gap-3 mb-5">
+                <div className={`w-12 h-12 ${colorMap[program.color]} rounded-xl flex items-center justify-center text-2xl shadow-lg`}>
+                  {program.icon}
                 </div>
+                <h3 className="text-xl font-bold">{program.title}</h3>
               </div>
-            )
-          })}
+              <ul className="space-y-3">
+                {program.items.map((item) => (
+                  <li key={item} className="flex items-center gap-3">
+                    <span className="w-5 h-5 bg-yellow-400/20 text-yellow-400 rounded-full flex items-center justify-center text-xs flex-shrink-0">✓</span>
+                    <span className="text-blue-100">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         {/* CTA */}
