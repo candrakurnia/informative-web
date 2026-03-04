@@ -1,3 +1,4 @@
+import logo from '../assets/ic_logo.png'
 export default function Footer() {
   const scrollTo = (id) => {
     const el = document.getElementById(id)
@@ -12,7 +13,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold">
-                SPP
+                <img src={logo} alt="Logo Bimbel SPP" className="w-10 h-10 rounded-xl object-contain" />
               </div>
               <div>
                 <div className="text-sm font-bold text-white leading-tight">Bimbel Sukses</div>

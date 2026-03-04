@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import logo from '../assets/ic_logo.png'
 
 const navLinks = [
   { id: 'beranda', label: 'Beranda' },
@@ -90,9 +91,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <button onClick={() => scrollTo('beranda')} className="flex items-center gap-2">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg ${scrolled ? 'bg-blue-600 text-white' : 'bg-white text-blue-600'}`}>
-              SPP
-            </div>
+            <img src={logo} alt="Logo Bimbel SPP" className="w-10 h-10 rounded-xl object-contain" />
             <div className="hidden sm:block">
               <div className={`text-sm font-bold leading-tight ${scrolled ? 'text-gray-800' : 'text-white'}`}>Bimbel Sukses</div>
               <div className={`text-xs leading-tight ${scrolled ? 'text-blue-600' : 'text-blue-200'}`}>Pamong Praja</div>
