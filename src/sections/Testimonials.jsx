@@ -51,7 +51,7 @@ export default function Testimonials() {
                 <img
                   src={photos[index]}
                   alt={t.name}
-                  className="w-20 h-20 rounded-full object-contain ring-2 ring-blue-100"
+                  className="w-20 h-24 rounded-2xl object-fill bg-white ring-2 ring-blue-100"
                 />
                 <div>
                   <div className="font-bold text-gray-800">{t.name}</div>

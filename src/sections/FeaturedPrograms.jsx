@@ -101,7 +101,7 @@ export default function FeaturedPrograms() {
         {/* CTA */}
         <div className="text-center mt-12">
           <a
-            href="https://wa.me/6281234567890?text=Halo%20Bimbel%20SPP,%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20program%20unggulan"
+            href="https://wa.me/6288286397018?text=Halo%20Bimbel%20SPP,%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20program%20unggulan"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-blue-900 font-bold px-8 py-4 rounded-2xl transition-colors text-lg shadow-lg shadow-yellow-400/20"
