@@ -16,8 +16,8 @@ export default function Footer() {
                 <img src={logo} alt="Logo Bimbel SPP" className="w-10 h-10 rounded-xl object-contain" />
               </div>
               <div>
-                <div className="text-sm font-bold text-white leading-tight">Bimbel Sukses</div>
-                <div className="text-xs text-blue-400 leading-tight">Pamong Praja</div>
+                <div className="text-sm font-bold text-white leading-tight">Bimbel</div>
+                <div className="text-xs text-blue-400 leading-tight">Sukses Pamong Praja</div>
               </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">

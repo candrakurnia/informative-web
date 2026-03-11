@@ -93,8 +93,8 @@ export default function Navbar() {
           <button onClick={() => scrollTo('beranda')} className="flex items-center gap-2">
             <img src={logo} alt="Logo Bimbel SPP" className="w-10 h-10 rounded-xl object-contain" />
             <div className="hidden sm:block">
-              <div className={`text-sm font-bold leading-tight ${scrolled ? 'text-gray-800' : 'text-white'}`}>Bimbel Sukses</div>
-              <div className={`text-xs font-bold leading-tight ${scrolled ? 'text-blue-800' : 'text-white'}`}>Pamong Praja</div>
+              <div className={`text-sm font-bold leading-tight text-left ${scrolled ? 'text-gray-800' : 'text-white'}`}>Bimbel</div>
+              <div className={`text-xs font-bold leading-tight text-left ${scrolled ? 'text-blue-800' : 'text-white'}`}>Sukses Pamong Praja</div>
             </div>
           </button>
 

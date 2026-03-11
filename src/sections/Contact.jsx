@@ -93,7 +93,7 @@ export default function Contact() {
               Jl. Sukawening No. 16, Kel. Hegarmanah, Kec. Jatinangor, Sumedang, Jawa Barat 45363
             </p>
             <a
-              href="https://www.google.com/maps/place/Jl.+Sukawening+No.16,+Hegarmanah,+Kec.+Jatinangor,+Kabupaten+Sumedang,+Jawa+Barat+45363/@-6.9320843,107.7784008,17z"
+              href="https://www.google.com/maps/place/-6.933218,+107.781522/@-6.9331929,107.7815081,22z/data=!4m4!3m3!8m2!3d-6.9332179!4d107.7815218?g_ep=Eg1tbF8yMDI2MDMwNF8wIOC7DCoASAJQAg%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-blue-600 font-medium hover:underline text-sm"
