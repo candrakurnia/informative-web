@@ -8,7 +8,7 @@ const offlineFeatures = [
   'Belajar seluruh Materi SKD',
   'Free akses Simulasi CAT SKD',
   'Pelatihan bimbingan jasmani',
-  'Bimbingan kelas Bahasa Inggris untuk TOEFL',
+  'Bimbingan kelas Bahasa Inggris untuk TOEFL & IELTS',
   'Fasilitas belajar',
   'Fasilitas penginapan',
   'Kelas berisi 25 – 30 orang',
@@ -52,7 +52,7 @@ export default function Programs() {
             </ul>
 
             <a
-              href="https://wa.me/6281234567890?text=Halo%20Bimbel%20SPP,%20saya%20tertarik%20dengan%20program%20Online%20Class"
+              href="https://wa.me/6288286397018?text=Halo%20Bimbel%20SPP,%20saya%20tertarik%20dengan%20program%20Online%20Class"
               target="_blank"
               rel="noopener noreferrer"
               className="block text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition-colors"
@@ -87,7 +87,7 @@ export default function Programs() {
             </ul>
 
             <a
-              href="https://wa.me/6281234567890?text=Halo%20Bimbel%20SPP,%20saya%20tertarik%20dengan%20program%20Offline%20Class"
+              href="https://wa.me/6288286397018?text=Halo%20Bimbel%20SPP,%20saya%20tertarik%20dengan%20program%20Offline%20Class"
               target="_blank"
               rel="noopener noreferrer"
               className="block text-center bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 rounded-xl transition-colors"

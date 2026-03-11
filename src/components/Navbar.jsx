@@ -94,7 +94,7 @@ export default function Navbar() {
             <img src={logo} alt="Logo Bimbel SPP" className="w-10 h-10 rounded-xl object-contain" />
             <div className="hidden sm:block">
               <div className={`text-sm font-bold leading-tight ${scrolled ? 'text-gray-800' : 'text-white'}`}>Bimbel Sukses</div>
-              <div className={`text-xs leading-tight ${scrolled ? 'text-blue-600' : 'text-blue-200'}`}>Pamong Praja</div>
+              <div className={`text-xs font-bold leading-tight ${scrolled ? 'text-blue-800' : 'text-white'}`}>Pamong Praja</div>
             </div>
           </button>
 

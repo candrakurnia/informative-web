@@ -10,8 +10,14 @@ const photos = Object.entries(photoModules)
   .map(([, mod]) => mod.default)
 
 const testimonials = [
+  { name: 'Ahmad Sofian Ginting', institution: 'PTDI-STTD 2022', region: 'Asal: Riau', nilai:'SKD: 444',  quote: 'Kesan saya selama dua tahun lebih mengikuti bimbingan belajar di SPP, saya merasakan banyak pengalaman dan pembelajaran yang sangat berharga. SPP bukan hanya menjadi tempat belajar materi akademik, tapi juga tempat untuk membentuk mental, kedisiplinan, dan semangat juang dalam meraih cita-cita masuk sekolah kedinasan.' },
+  { name: 'Muhammad Pakal Pirmananda', institution: 'IPDN Angkatan 2021', region: 'Asal: Lampung', nilai:'SKD: 443',  quote: 'Kesan saya sebagai alumni SPP, tentunya saya mendapatkan banyak ilmu, pelajaran, serta pengalaman yang sangat luar biasa dari tenaga ahli dan teman-teman dari SPP, yang belum tentu saya temukan dan saya dapatkan di tempat lain. selama itu juga diri saya dipersiapkan dan di didik untuk lebih disiplin, tegas, dan bisa cepat memahami banyak hal. Terimakasih Untuk SPP, TERBAIKKK !!!' },
+  { name: 'Wirawafa Putra Rechar', institution: 'IPDN Angkatan 2025', region: 'Asal: Jawa Barat', nilai:'SKD: 483',  quote: 'Proses pembelajaran berjalan dengan baik, terstruktur, dan mudah dipahami. Materi yang diberikan sangat relevan serta disampaikan dengan cara yang menarik sehingga membuat saya semakin semangat untuk belajar.' },
+  { name: 'Visca Dea Jelita', institution: 'Kementerian Imigrasi & Pemasyarakatan 2024', region: 'Asal: Lampung', nilai:'SKD: 493',  quote: 'Kesan nya seru banget bisa ketemu sama temen temen dari nusantara, mentor nya juga asik dan fleksibel untuk diajak diskusi, Sukses terus buat Spp!!!' },
+  { name: 'Muhammad Sultan Alfarizi', institution: 'Kementerian Imigrasi & Pemasyarakatan 2024', region: 'Asal: Sumatera Selatan', nilai:'SKD: 412',  quote: '~ tidak bisa berkata kata, SPP BESTTTTTTT! ~' },
+  { name: 'Muhammad Fadel Aulia, S.H', institution: 'Kejaksaan RI 2024', region: 'Asal: Lampung', nilai:'SKD: 381',  quote: 'Pembelajaranya maximal dan pengelolaan materi sangat baik dari mentor sehingga cepat untuk di pahami' },
   { name: 'Lilis Dwi Suryani', institution: 'POLTEKPIN 2024', region: 'Asal: Jawa Tengah', nilai:'SKD: 412',  quote: 'Terbaik pokoknya🫰🏻.' },
-  { name: 'M Dioluvans Virnanda', institution: 'Kejaksaan RI 2024', region: 'Asal: Lampung', nilai:'SKD: 403', quote: 'Mentor nya fleksibel dan sabar ngajarin materi sampai paham, fasilitas belajar oke, SPP best!' },
+  { name: 'ZAMZAM JALALUDIN KUSUMAH', institution: 'IPDN Angkatan 2025', region: 'Asal: Jawa Barat', nilai:'SKD: 472', quote: 'Belajar seru sampe paham semua materi, pokoknya mantappp!!' },
   { name: 'Mochamad Zacky Khadafi', institution: 'IPDN Angkatan 2025', region: 'Asal: Banten', nilai:'SKD: 478', quote: 'SAM (Seru Asik Mantap).' },
   { name: 'MUHAMMAD ZEIN MUTTAQIN', institution: 'IPDN Angkatan 2025', region: 'Asal: Banten', nilai:'SKD: 461', quote: 'Selama belajar di bimbel SPP saya mendapatkan banyak pengalaman dan pengetahuan yang bermanfaat. Materi yang diajarkan menjadi lebih mudah dipahami karena cara penyampaiannya jelas dan para pengajarnya juga sabar dalam membimbing siswa. Suasana belajar yang nyaman, seru, dan asik membuat saya lebih semangat untuk mengikuti setiap pembelajaran. Semoga bimbel SPP terus berkembang, semakin baik, dan tetap membantu para siswa dalam mencapai cita-cita.' },
   { name: 'FADHIL HAEKAL SYARKANI', institution: 'IPDN Angkatan 2025', region: 'Asal: Riau', nilai:'SKD: 493', quote: '6 bulan yang sama sekali ga sia sia banyak pengalaman dan pelajaran yang di dapatkan di bimbel SPP inii👍' },
@@ -45,7 +51,7 @@ export default function Testimonials() {
                 <img
                   src={photos[index]}
                   alt={t.name}
-                  className="w-14 h-14 rounded-full object-cover ring-2 ring-blue-100"
+                  className="w-20 h-20 rounded-full object-contain ring-2 ring-blue-100"
                 />
                 <div>
                   <div className="font-bold text-gray-800">{t.name}</div>
