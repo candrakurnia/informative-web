@@ -70,7 +70,7 @@ export default function Hero() {
                 Lihat Program
               </button>
               <a
-                href="https://wa.me/6281234567890?text=Halo%20Bimbel%20SPP,%20saya%20ingin%20bertanya%20tentang%20program%20bimbel"
+                href="https://wa.me/6288286397018?text=Halo%20Bimbel%20SPP,%20saya%20ingin%20bertanya%20tentang%20program%20bimbel"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-white/30 hover:bg-white/10 text-white font-semibold px-8 py-4 rounded-2xl transition-colors text-lg"
