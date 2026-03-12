@@ -4,8 +4,8 @@ import picture3 from '../assets/picture3.PNG'
 
 const team = [
   { name: 'DR. ROMI SAPUTRA, S.SOS, M.SI.', role: 'Founder', photo: picture1 },
+  { name: 'Agus Salim, S.Pd.I', role: 'Pembina', photo: picture3 },
   { name: 'SAPRIL ADAM', role: 'Manager', photo: picture2 },
-  { name: 'Agus Salim, S.Pd.I', role: 'Pembina Umum', photo: picture3 },
 ]
 
 export default function Team() {
