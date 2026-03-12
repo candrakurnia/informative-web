@@ -1,9 +1,11 @@
 import picture1 from '../assets/picture1.JPG.jpeg'
 import picture2 from '../assets/picture2.JPG.jpeg'
+import picture3 from '../assets/picture3.PNG'
 
 const team = [
   { name: 'DR. ROMI SAPUTRA, S.SOS, M.SI.', role: 'Founder', photo: picture1 },
   { name: 'SAPRIL ADAM', role: 'Manager', photo: picture2 },
+  { name: 'Agus Salim, S.Pd.I', role: 'Pembina Umum', photo: picture3 },
 ]
 
 export default function Team() {
@@ -13,7 +15,7 @@ export default function Team() {
         <div className="text-center mb-16">
           <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Tim Kami</span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-4">
-            Founder dan Manager Bimbel SPP
+            Founder, Manager, dan Pembina Bimbel SPP
           </h2>
         </div>
 
