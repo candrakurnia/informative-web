@@ -81,7 +81,7 @@ export default function Footer() {
                 📧 suksespamongp@gmail.com
               </a>
               <a href="https://instagram.com/bimbelspp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
-                📸 @bimbelspp
+              <img src={logo} alt="Logo Bimbel SPP" className="w-4 h-4" /> @bimbelspp
               </a>
               <p className="flex items-start gap-2">
                 📍 Jl. Sukawening No. 16, Kel. Hegarmanah, Kec. Jatinangor, Sumedang, Jawa Barat 45363
