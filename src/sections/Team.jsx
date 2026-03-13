@@ -1,6 +1,6 @@
 import picture1 from '../assets/picture1.JPG.jpeg'
 import picture2 from '../assets/picture2.JPG.jpeg'
-import picture3 from '../assets/picture3.PNG'
+import picture3 from '../assets/picture3.JPG.jpeg'
 
 const team = [
   { name: 'DR. ROMI SAPUTRA, S.SOS, M.SI.', role: 'Founder', photo: picture1 },
