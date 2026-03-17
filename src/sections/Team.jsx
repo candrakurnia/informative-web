@@ -5,11 +5,16 @@ import picture4 from '../assets/picture4.jpeg'
 import picture5 from '../assets/picture5.jpeg'
 import picture6 from '../assets/picture6.jpeg'
 import picture7 from '../assets/picture7.jpeg'
+import picture8 from '../assets/picture8.jpeg'
 
 const teamMembers = [
   { name: 'DR. ROMI SAPUTRA, S.SOS, M.SI.', role: 'Founder', photo: picture1 },
   { name: 'AGUS SALIM, S.Pd.I', role: 'Pembina', photo: picture3 },
   { name: 'SAPRIL ADAM', role: 'Manager', photo: picture2 },
+]
+
+const timAdmin = [
+  { photo: picture8 },
 ]
 
 const mentors = [
@@ -65,6 +70,25 @@ export default function Team() {
                 <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow mb-4">
                   <img
                     src={mentor.photo}
+                    className="w-full aspect-[3/4] object-cover"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider">Tim Admin</span>
+          </div>
+          <div className="grid grid-cols-1 gap-6">
+            {timAdmin.map((timAdmin, index) => (
+              <div key={index} className="text-center w-full max-w-sm mx-auto">
+                <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow mb-4">
+                  <img
+                    src={timAdmin.photo}
+                    alt="Tim Admin"
                     className="w-full aspect-[3/4] object-cover"
                   />
                 </div>

@@ -12,17 +12,52 @@ const photos = Object.entries(galleryModules)
   .map(([, mod]) => mod.default)
 
 function PhotoCard({ src, alt, onClick }) {
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    setIsLoaded(false)
+
+    const image = new Image()
+    image.src = src
+
+    const handleLoad = () => setIsLoaded(true)
+    const handleError = () => setIsLoaded(true)
+
+    image.addEventListener('load', handleLoad)
+    image.addEventListener('error', handleError)
+
+    if (image.complete) {
+      setIsLoaded(true)
+    }
+
+    return () => {
+      image.removeEventListener('load', handleLoad)
+      image.removeEventListener('error', handleError)
+    }
+  }, [src])
+
   return (
     <button
       type="button"
       onClick={onClick}
-      className="group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 text-left"
+      className="group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 text-left bg-gray-100"
     >
-      <img
-        src={src}
-        alt={alt}
-        className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-      />
+      <div className="relative h-48 md:h-64">
+        {!isLoaded && (
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 animate-pulse bg-gray-200"
+          />
+        )}
+        <img
+          src={src}
+          alt={alt}
+          loading="lazy"
+          className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
+      </div>
     </button>
   )
 }

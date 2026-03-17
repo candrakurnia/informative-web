@@ -79,7 +79,7 @@ export default function WhyUs() {
           </div>
 
           <p className="text-xl md:text-2xl font-extrabold text-blue-600 mt-8">
-            Target kami satu: <span className="text-yellow-500">LOLOS SKD.</span>
+            Target : <span className="text-yellow-500">lolos sampai menjadi Praja atau Taruna</span>
           </p>
         </div>
 

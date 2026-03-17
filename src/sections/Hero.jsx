@@ -31,7 +31,7 @@ export default function Hero() {
             <div className="mb-6">
               <p className="text-sm text-blue-300 mb-2">Kami membantu persiapan masuk:</p>
               <div className="flex flex-wrap gap-2">
-                {['IPDN', 'STIN', 'Poltekim', 'Poltekip', 'Sekolah Kedinasan Lainnya'].map((name) => (
+                {['IPDN', 'STIN', 'Poltekim', 'Poltekip', 'Akademi TNI', 'AKPOL', 'UNHAN', 'Sekolah Kedinasan Lainnya'].map((name) => (
                   <span key={name} className="bg-white/10 text-white text-sm font-medium px-3 py-1 rounded-full border border-white/20">
                     {name}
                   </span>
