@@ -16,24 +16,6 @@ function PhotoCard({ src, alt, onClick }) {
 
   useEffect(() => {
     setIsLoaded(false)
-
-    const image = new Image()
-    image.src = src
-
-    const handleLoad = () => setIsLoaded(true)
-    const handleError = () => setIsLoaded(true)
-
-    image.addEventListener('load', handleLoad)
-    image.addEventListener('error', handleError)
-
-    if (image.complete) {
-      setIsLoaded(true)
-    }
-
-    return () => {
-      image.removeEventListener('load', handleLoad)
-      image.removeEventListener('error', handleError)
-    }
   }, [src])
 
   return (
@@ -46,13 +28,23 @@ function PhotoCard({ src, alt, onClick }) {
         {!isLoaded && (
           <div
             aria-hidden="true"
-            className="absolute inset-0 animate-pulse bg-gray-200"
-          />
+            className="absolute inset-0 animate-pulse bg-gray-100"
+          >
+            <div className="flex h-full flex-col justify-between p-4">
+              <div className="h-24 rounded-xl bg-gray-200/90" />
+              <div className="space-y-2">
+                <div className="h-3 w-3/4 rounded-full bg-gray-200/90" />
+                <div className="h-3 w-1/2 rounded-full bg-gray-200/80" />
+              </div>
+            </div>
+          </div>
         )}
         <img
           src={src}
           alt={alt}
           loading="lazy"
+          onLoad={() => setIsLoaded(true)}
+          onError={() => setIsLoaded(true)}
           className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
