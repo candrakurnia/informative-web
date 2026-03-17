@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import picture1 from '../assets/picture1.JPG.jpeg'
 import picture2 from '../assets/picture2.JPG.jpeg'
 import picture3 from '../assets/picture3.JPG.jpeg'
@@ -24,6 +25,43 @@ const mentors = [
   { photo: picture7 },
 ]
 
+function TeamPhoto({ src, alt }) {
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    setIsLoaded(false)
+  }, [src])
+
+  return (
+    <div className="relative aspect-[3/4] bg-gray-100">
+      {!isLoaded && (
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 animate-pulse bg-gray-100"
+        >
+          <div className="flex h-full flex-col justify-between p-4">
+            <div className="h-2/3 rounded-xl bg-gray-200/90" />
+            <div className="space-y-2">
+              <div className="h-3 w-3/4 rounded-full bg-gray-200/90" />
+              <div className="h-3 w-1/2 rounded-full bg-gray-200/80" />
+            </div>
+          </div>
+        </div>
+      )}
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        onLoad={() => setIsLoaded(true)}
+        onError={() => setIsLoaded(true)}
+        className={`w-full h-full object-cover transition-opacity duration-500 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+      />
+    </div>
+  )
+}
+
 export default function Team() {
   return (
     <section id="tim" className="py-20 bg-white">
@@ -47,11 +85,7 @@ export default function Team() {
               }
             >
               <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow mb-4">
-                <img
-                  src={person.photo}
-                  alt={person.name}
-                  className="w-full aspect-[3/4] object-cover"
-                />
+                <TeamPhoto src={person.photo} alt={person.name} />
               </div>
               <span className="inline-block text-blue-600 text-sm font-semibold mb-1">{person.role}</span>
               <h3 className="text-lg font-bold text-gray-900">{person.name}</h3>
@@ -68,10 +102,7 @@ export default function Team() {
             {mentors.map((mentor, index) => (
               <div key={index} className="text-center">
                 <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow mb-4">
-                  <img
-                    src={mentor.photo}
-                    className="w-full aspect-[3/4] object-cover"
-                  />
+                  <TeamPhoto src={mentor.photo} alt={`Mentor ${index + 1}`} />
                 </div>
               </div>
             ))}
@@ -86,11 +117,7 @@ export default function Team() {
             {timAdmin.map((timAdmin, index) => (
               <div key={index} className="text-center w-full max-w-sm mx-auto">
                 <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow mb-4">
-                  <img
-                    src={timAdmin.photo}
-                    alt="Tim Admin"
-                    className="w-full aspect-[3/4] object-cover"
-                  />
+                  <TeamPhoto src={timAdmin.photo} alt="Tim Admin" />
                 </div>
               </div>
             ))}
