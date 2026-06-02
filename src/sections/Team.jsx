@@ -10,8 +10,8 @@ import picture8 from '../assets/picture8.jpeg'
 
 const teamMembers = [
   { name: 'DR. ROMI SAPUTRA, S.SOS, M.SI.', role: 'Founder', photo: picture1 },
-  { name: 'AGUS SALIM, S.Pd.I', role: 'Pembina', photo: picture3 },
-  { name: 'SAPRIL ADAM', role: 'Manager', photo: picture2 },
+  { name: 'AGUS SALIM, S.Pd., M. Pd.', role: 'Pembina', photo: picture3 },
+  { name: 'SAPRIL ADAM S.H', role: 'Manager', photo: picture2 },
 ]
 
 const timAdmin = [
